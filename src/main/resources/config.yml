@@ -1,0 +1,213 @@
+##################
+# Whitelists #####
+##################
+
+# What items should be allowed to be placed?
+blockPlaceWhitelist:
+- 'COBWEB'
+
+# What items should be allowed to break?
+blockBreakWhitelist:
+- 'COBWEB'
+
+##################
+## Map Rotation ##
+##################
+
+# How often, in minutes, should the maps change?
+mapRotateTime: 15
+
+# What should the server broadcast when the map changes?
+mapChangeMessage: '&6Map changing to %newmapname%'
+
+##################
+#### General #####
+##################
+
+# Should items drop on death?
+dropItemsOnDeath: false
+
+# Should food be degerated?
+enableFood: false
+
+# What resource pack should we try to force on the player
+resourcePack: https://dl.dropboxusercontent.com/u/104089738/Texture.zip
+
+# How often, in seconds, should the scoreboard be updated? 
+# This value is in ticks. Each tick is ~ 1/20 of a second
+# 10 = about half a second
+scoreboardUpdateInterval: 10
+
+# How often, in seconds, should the player data be saved to the config?
+savePlayerDataInterval: 90
+
+# Remove how many credits when combat logging?
+combatTagPunish: 5.0
+
+# How much experience should a player get per kill?
+xpPerKill: 5
+
+# How many credits should the player get when they kill a player?
+creditsPerKill: 1.0
+
+# Should players be able to move items in their inventory?
+moveInventoryItems: true
+
+# MOTD config
+motd:
+  ## Can use %map% for mapname
+  gameStarted: '&3Join for fun! Map: %map%'
+  gameStopped: '&5Game stopped!'
+  
+# Sign color, what color should KitPVP signs change when made?
+signColor: '&4'
+  
+###################
+### Chat Format ###
+###################
+# %s = player name, player message
+# $class = player's current class name
+# $rank = player's current class rank
+# $prestige = player's current class prestige
+
+chat:
+  inGame: '[$class][$prestige]%s: %s'
+  outOfGame: '%s: %s'
+  
+###################
+# Explosion Regen #
+###################
+
+explosion:
+  # How long after the explosion should it start to regeneration?
+  regenDelay: 6
+  # How fast should it regeneration? Must be more than or equal to 1
+  speed: 1
+  # I don't know what this does but it's probably important?
+  gravityBlockDisappearDelay: 2
+  
+##################
+##### Classes ####
+##################
+
+classes:
+  FireNinja:
+    enabled: true
+    default: true
+    className: '&4FireNinja'
+    prefix: '&4[FireNinja]'
+    classDesc: '&5Be the ninja...'
+    classCost: 100.0
+    abilityItem:
+      item: NETHER_STAR
+      name: '&4FireNinja'
+      lore: 
+      - '&5NinjaPort - Teleport directly to player'
+      - '&5FlaminStar - Thow flamin ninja stars!'
+      - '&5Invisibility - Become invisible'
+    abilities:
+      ninjaport:
+        minPrestige: 0
+        maxDistance: 30.0
+        cooldownTime: 5
+      flaminstar:
+        minPrestige: 1
+        fireTime: 3
+        cooldownTime: 3
+      invisibility:
+        minPrestige: 2
+        invisTime: 10
+        cooldownTime: 10
+  Spiderman:
+    enabled: true
+    default: true
+    className: '&4Spiderman'
+    prefix: '&4[Spiderman]'
+    classDesc: '&5Shoot webs!'
+    classCost: 150.0
+    abilityItem:
+      item: FISHING_ROD
+      name: '&4Spiderman'
+      lore: 
+      - '&5Webbed - Shoot webs!'
+      - '&5Hook - Basically a grapple hook...'
+      - '&5Spider Attack - Summon the spiders to fight with you!'
+    abilities:
+      ninjaport:
+        minPrestige: 0
+        maxDistance: 30.0
+        cooldownTime: 5
+      flaminstar:
+        minPrestige: 1
+        fireTime: 3
+        cooldownTime: 3
+      invisibility:
+        minPrestige: 2
+        invisTime: 10
+        cooldownTime: 10
+        
+##################
+##### IG Shop ####
+##################
+
+shopitems:
+  grenade:
+    enabled: true
+    cost: 100.0
+    name: '&4==Grenade=='
+    ## explosionDelay and fizzDelay is measured in ticks since item dropped. 20 ticks ~ 1 second
+    explosionDelay: 80
+    fizzDelay: 40
+    power: 3
+    lore:
+    - '&4Explodes 4 seconds after drop.'
+    - '&6Drop to activate!'
+  rpg:
+    enabled: true
+    cost: 150.0
+    name: 'RPG'
+    power: 5
+    # Cooldown time is in seconds
+    cooldown: 20
+    lore:
+    - '&7RPG'
+    - '&5Left or Right click to launch it!'
+  flashbang:
+    enabled: true
+    cost: 200.0
+    name: '&8Flashbang'
+    ## Delay time is measured in seconds
+    delay: 60
+    lore:
+    - 'Flashbang'
+    - '&5Flashbang with color! :D'
+    effect:
+      range: 5.0
+      ## How many ticks should the effect last?
+      last: 120
+  snowball:
+    enabled: true
+    cost: 125.0
+    name: '&4Snowball'
+    lore:
+    - '&8Snowball'
+    - '&4Cool snowball'
+##################
+##### Signs ######
+##################
+
+# What should the first line of a sign say for it to be registered as a click to join sign?
+signMsgToJoinGame: '&6[KitPVP]'
+
+##################
+## Broadcasts ####
+##################
+
+# What should display on the players screen when they join new?
+newPlayerMsg: '&1Welcome, %player%'
+
+# What should display on the players screen when they join returning?
+joinMsg: '&3Welcome back, %player%'
+
+showTime: 5
+fadeTime: 1

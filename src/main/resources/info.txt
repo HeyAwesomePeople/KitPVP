@@ -1,0 +1,32 @@
+Commands: 
+	/kitpvp (start/stop)
+	/kitpvp addmap <name>
+	/kitpvp removemap <mapid>
+	/kitpvp teleport <mapid>
+	/kitpvp rotation
+	/kitpvp reload
+	/kitpvp sethub
+	
+	/join
+	/leave
+	/logout
+
+Permissions:
+    kitpvp.placeblock.bypass
+    kitpvp.placeblock.BLOCKNAME
+    kitpvp.breakblock.bypass
+    kitpvp.breakblock.BLOCKNAME
+    
+    kitpvp.admin - All admin commands
+    kitpvp.player - All player commands
+    
+Donor Permissions:
+	kitpvp.donor.creditmultiplier.25
+	kitpvp.donor.creditmultiplier.50
+	kitpvp.donor.creditmultiplier.75
+	kitpvp.donor.creditmultiplier.100
+	
+	kitpvp.donor.expmultiplier.25
+	kitpvp.donor.expmultiplier.50
+	kitpvp.donor.expmultiplier.75
+	kitpvp.donor.expmultiplier.100

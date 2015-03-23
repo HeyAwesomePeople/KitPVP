@@ -1,0 +1,12 @@
+name: KitPVP
+main: me.HeyAwesomePeople.kitpvp.KitPVP
+version: 0.1
+commands:
+  kitpvp:
+    description: Admin command
+  join:
+    description: Player command
+  leave:
+    description: Player command
+  logout:
+    description: Player command
